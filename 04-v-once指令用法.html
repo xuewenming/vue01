@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-once的指令用法</title>
+
+    <!--数据相应，编译一次后，不会在响应编译-->
+</head>
+
+<script text="text/javascript" src="js/vue.js"></script>
+<body>
+    <div id="app">
+        <h1  v-once v-text="name"></h1>
+
+    </div>
+
+    <script>
+        var vm = new Vue({
+           el:'#app',
+           data:{
+               name:'小武'
+           }
+        });
+    </script>
+
+</body>
+</html>

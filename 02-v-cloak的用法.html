@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-cloak的用法</title>
+
+<!--消除插值闪动问题-->
+
+
+    <style type="text/css">
+        [v-cloak]{
+            display: none;
+        }
+    </style>
+</head>
+
+<script text="text/javascipt" src="js/vue.js"></script>
+<body>
+    <div id="app">
+        <div v-cloak>{{name}}</div>
+    </div>
+
+
+    <script text="text/javascript">
+        var ve = new Vue({
+           el:'#app',
+           data: {
+               name:'姓名'
+           }
+        });
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据填充3个指令的相关用法</title>
+</head>
+   <!--
+    v-text:填充纯文本，没有插值闪动
+    v-html:填充html，有危险
+    v-pre:不进行编译器编译
+    -->
+<script text="text/javascript" src="js/vue.js"></script>
+<body>
+    <div id="app">
+        <h1 v-text="name"></h1>
+
+        <div v-html="age"></div>
+
+        <div v-pre>{{1+1}}</div>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el:'#app',
+            data:{
+                name:'小武',
+                age: '<h1>19<h1>'
+            }
+        });
+    </script>
+
+</body>
+</html>

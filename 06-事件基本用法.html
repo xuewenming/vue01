@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件的基本用法</title>
+</head>
+<body>
+
+    <div id="app">
+        <h1>{{num}}</h1>
+        <button v-on:click="num++">点击</button>
+        <button @click="num++">点击1</button>
+        <button @click="handler">点击2</button>
+        <button @click="handler()">点击3</button>
+
+    </div>
+
+    <script type="text/javascript" src="js/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el:'#app',
+            data:{
+                num:0
+            },
+            // methods中主要定义一些函数
+            methods:{
+                handler:function () {
+                    console.log(vm === this)
+                    // 在函数中，如果想要使用data中的数据，一定要加this
+                    this.num++;
+                }
+            }
+        });
+    </script>
+</body>
+</html>

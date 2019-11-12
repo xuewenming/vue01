@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>双向数据绑定标签 : v-model</title>
+</head>
+
+    <!--
+        1.mvvm
+
+        v -> m
+        从视图到模型
+        m -> v
+        从模型到视图
+
+    -->
+
+
+<body>
+    <div id="app">
+        <h1 v-text="msg"></h1>
+        <input type="text" v-model="msg">
+    </div>
+
+    <script text="text/javascript" src="js/vue.js"></script>
+    <script>
+        var vm = new Vue({
+           el:'#app',
+           data: {
+               msg:'姓名'
+           }
+
+
+        });
+    </script>
+
+</body>
+</html>
